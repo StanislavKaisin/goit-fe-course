@@ -3,6 +3,19 @@
   margin: 0;
   padding: 0;
 }
+body {
+  /* Позиционирование */
+  /* Блочная модель */
+  /* Типографика */
+  font-family: "Ubuntu";
+  font-size: 14px;
+  line-height: 17px;
+  color: #626262;
+  /* Отображение */
+  /* background: url(../img/homework-03.jpg) no-repeat center top; */
+  /* Прочее */ 
+}
+
 .main-content {
   /* Позиционирование */
   /* Блочная модель */
@@ -11,10 +24,6 @@
   margin: auto;
   width: 960px;
   /* Типографика */
-  font-family: "Ubuntu";
-  font-size: 14px;
-  line-height: 17px;
-  color: #626262;
   /* Отображение */
   /* Прочее */
 }
@@ -36,6 +45,7 @@
   /* Позиционирование */
   /* Блочная модель */
   display: inline-block;
+  margin-right: 15%;
   /* Типографика */
   /* Отображение */
   /* Прочее */
@@ -45,7 +55,7 @@
   /* Блочная модель */
   /* Типографика */
   /* Отображение */
-  margin-right: 117px;
+  /* margin-right: 117px; */
   /* Прочее */
 }
 .photodiary-item {
@@ -53,7 +63,7 @@
   /* Блочная модель */
   /* Типографика */
   /* Отображение */
-  margin-right: 99px;
+  /* margin-right: 99px; */
   /* Прочее */
 }
 .music-item {
@@ -61,7 +71,7 @@
   /* Блочная модель */
   /* Типографика */
   /* Отображение */
-  margin-right: 91px;
+  /* margin-right: 91px; */
   /* Прочее */
 }
 .navigation-link {
@@ -86,13 +96,21 @@
   /* Блочная модель */
   display: inline-block;
   width: 440px;
-  height: 500px;
+  /* height: 500px; */
   margin-right: 6px;
   margin-bottom: 110px;
   padding-left: 30px;
   /* Типографика */
   /* Отображение */
   /* Прочее */ 
+}
+.lifestyle-1 {
+  /* Позиционирование */
+  /* Блочная модель */
+  margin-bottom: 129px;
+  /* Типографика */
+  /* Отображение */
+  /* Прочее */
 }
 .article-photo {
   /* Позиционирование */
@@ -109,6 +127,7 @@
   /* Типографика */
   text-transform: uppercase;
   /* Отображение */
+  color: #b4ad9e;
   /* Прочее */ 
 }
 .article-title {
@@ -125,7 +144,7 @@
 .article-text {
   /* Позиционирование */
   /* Блочная модель */
-  width: 420px;
+  /* width: 420px; */
   /* Типографика */
   line-height: 24px;
   text-align: left;
@@ -136,7 +155,7 @@
 .photodiary-1 {
   /* Позиционирование */
   /* Блочная модель */
-  margin-bottom: 115px;
+  margin-bottom: 134px;
   /* Типографика */
   /* Отображение */
   /* Прочее */ 
@@ -144,7 +163,7 @@
 .lifestyle-3, .lifestyle-4{
   /* Позиционирование */
   /* Блочная модель */
-  margin-bottom: 33px;
+  margin-bottom: 49px;
   /* Типографика */
   /* Отображение */
   /* Прочее */ 
@@ -152,18 +171,24 @@
 .wrapper {
   /* Позиционирование */
   /* Блочная модель */
-  padding-left: 387px;
+  /* display: inline-block; */
+  margin-bottom: 71px;
+  /* padding-left: 387px; */
   /* Типографика */
   /* Отображение */
+  text-align: center;
   /* Прочее */  
 }
 .load-more-button {
   /* Позиционирование */
   /* Блочная модель */
-  display: inline-block;
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   width: 163px;
-  height: 60px;
+  height: 60px; */
+  padding-top: 17px;
+  padding-right: 32px;
+  padding-bottom: 17px;
+  padding-left: 32px;
   /* Типографика */
   font-family: "Playfair Display";
   font-size: 20px;
@@ -174,5 +199,6 @@
   border-style: solid;
   background-color: #ffffff;
   border-radius:  0px;
+  border-width: 1px;
   /* Прочее */
 }
