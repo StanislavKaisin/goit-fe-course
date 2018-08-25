@@ -58,8 +58,10 @@ body {
   font-size: 30px;
   line-height: 36px;
 }
-.article-text {
+.article-text-container {
   width: 410px;
+}
+.article-text {
   line-height: 24px;
   text-align: left;
   text-align-last: justify;
