@@ -5,7 +5,6 @@
 body {
   font-family: "Playfair Display";
   font-size: 14px;
-  line-height: 17px;
   color: #626262;
 }
 .main-content {
@@ -39,7 +38,6 @@ body {
   width: 420px;
   margin-left: 30px;
   margin-right: 26px;
-  margin-bottom: 110px;
 }
 .lifestyle-1 {
   margin-bottom: 129px;
@@ -65,10 +63,8 @@ body {
 .photodiary-1 {
   margin-bottom: 134px;
 }
-.lifestyle-3, .lifestyle-4{
-  margin-bottom: 49px;
-}
 .button-container {
+  margin-top: 49px; 
   margin-bottom: 71px;
   text-align: center;
 }
@@ -86,4 +82,5 @@ body {
   background-color: #ffffff;
   border-radius:  0px;
   border-width: 1px;
+  cursor: pointer;
 }
