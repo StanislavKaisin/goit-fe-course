@@ -1,204 +1,91 @@
 *{
-  /* outline: solid red; */
   margin: 0;
   padding: 0;
 }
 body {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
   font-family: "Ubuntu";
   font-size: 14px;
   line-height: 17px;
   color: #626262;
-  /* Отображение */
-  /* background: url(../img/homework-03.jpg) no-repeat center top; */
-  /* Прочее */ 
 }
 
 .main-content {
-  /* Позиционирование */
-  /* Блочная модель */
   display: block;
   box-sizing: border-box;
   margin: auto;
   width: 960px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
 }
 .main-navigation {
-  /* Позиционирование */
-  /* Блочная модель */
   padding-top: 74px;
   padding-left: 194px;
   margin-bottom: 100px;
-  /* Типографика */
   font-family: "Playfair Display";
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  /* Отображение */
-  /* Прочее */
 }
 .navigation-item {
-  /* Позиционирование */
-  /* Блочная модель */
   display: inline-block;
   margin-right: 15%;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-.lifestyle-item {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* margin-right: 117px; */
-  /* Прочее */
-}
-.photodiary-item {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* margin-right: 99px; */
-  /* Прочее */
-}
-.music-item {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* margin-right: 91px; */
-  /* Прочее */
 }
 .navigation-link {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
   color: #626262;
-  /* Прочее */
   text-decoration: none;
 }
 .navigation-link:hover {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
   color: #03a9f4;
-  /* Прочее */
 }
 .main-content__article {
-  /* Позиционирование */
-  /* Блочная модель */
   display: inline-block;
   width: 440px;
-  /* height: 500px; */
   margin-right: 6px;
   margin-bottom: 110px;
   padding-left: 30px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */ 
 }
 .lifestyle-1 {
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 129px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
 }
 .article-photo {
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 24px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */  
 }
 .article-category {
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 19px;
-  /* Типографика */
   text-transform: uppercase;
-  /* Отображение */
   color: #b4ad9e;
-  /* Прочее */ 
 }
 .article-title {
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 30px;
-  /* Типографика */
   font-family: "Playfair Display";
   font-size: 30px;
   line-height: 36px;
-  /* Отображение */
-  /* Прочее */   
 }
 .article-text {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* width: 420px; */
-  /* Типографика */
   line-height: 24px;
   text-align: left;
   text-align-last: justify;
-  /* Отображение */
-  /* Прочее */ 
 }
 .photodiary-1 {
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 134px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */ 
 }
 .lifestyle-3, .lifestyle-4{
-  /* Позиционирование */
-  /* Блочная модель */
   margin-bottom: 49px;
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */ 
 }
 .wrapper {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* display: inline-block; */
   margin-bottom: 71px;
-  /* padding-left: 387px; */
-  /* Типографика */
-  /* Отображение */
   text-align: center;
-  /* Прочее */  
 }
 .load-more-button {
-  /* Позиционирование */
-  /* Блочная модель */
-  /* box-sizing: border-box;
-  width: 163px;
-  height: 60px; */
   padding-top: 17px;
   padding-right: 32px;
   padding-bottom: 17px;
   padding-left: 32px;
-  /* Типографика */
   font-family: "Playfair Display";
   font-size: 20px;
   line-height: 24px;
   color: #626262;
-  /* Отображение */
   border-color: #626262;
   border-style: solid;
   background-color: #ffffff;
   border-radius:  0px;
   border-width: 1px;
-  /* Прочее */
 }
