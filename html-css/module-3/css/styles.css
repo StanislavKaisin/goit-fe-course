@@ -37,31 +37,32 @@ body {
 .main-content__article {
   display: inline-block;
   width: 440px;
-  margin-right: 36px;
+  margin-left: 30px;
+  margin-right: 6px;
   margin-bottom: 110px;
 }
 .lifestyle-1 {
   margin-bottom: 129px;
 }
 .article-photo {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   margin-bottom: 24px;
 }
 .article-category {
   margin-bottom: 19px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   font-family: "Ubuntu";
   text-transform: uppercase;
   color: #b4ad9e;
 }
 .article-title {
   margin-bottom: 30px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   font-size: 30px;
   line-height: 36px;
 }
 .article-text {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   line-height: 24px;
   text-align: left;
   text-align-last: justify;
