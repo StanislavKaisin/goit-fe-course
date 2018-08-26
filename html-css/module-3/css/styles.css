@@ -39,32 +39,29 @@ body {
   margin-left: 30px;
   margin-right: 26px;
 }
-.lifestyle-1 {
-  margin-bottom: 129px;
-}
-.article-photo {
-  margin-bottom: 25px;
-}
 .article-category {
+  margin-top: 25px;
   margin-bottom: 19px;
   font-family: "Ubuntu";
   text-transform: uppercase;
   color: #b4ad9e;
 }
 .article-title {
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
   font-size: 30px;
   line-height: 36px;
 }
 .article-text {
   line-height: 24px;
-  text-align: left;
 }
-.photodiary-1 {
-  margin-bottom: 134px;
+.vertical-align-block1{
+  height: 129px;
+}
+.vertical-align-block2 {
+  height: 133px;
 }
 .button-container {
-  margin-top: 49px; 
+  margin-top: 50px; 
   margin-bottom: 71px;
   text-align: center;
 }
