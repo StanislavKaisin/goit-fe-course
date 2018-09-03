@@ -12,8 +12,7 @@ a {
   text-decoration: none;
 }
 .container {
-  width: auto;
-  max-width: 1647px;
+  width: 1110px;
   margin-left: auto;
   margin-right: auto;
 } 
@@ -23,10 +22,6 @@ a {
   display: table;
 }
 /* header */
-.header{
-  margin-left: 259px;
-  max-width: 1110px;
-}
 .logo {
   margin-top: 13px;
   float: left;
@@ -63,9 +58,6 @@ a {
   color: #1abc9c;
 }
 /* main content */
-.main-content{
-  margin-left: 262px;
-}
 .products {
   margin-top: 68px;
   margin-bottom: 66px;
@@ -98,6 +90,9 @@ a {
   margin-bottom: 30px;
   width: 254px;
   float: left;
+}
+.product:nth-child(4n+4){
+  margin-right: 0px;
 }
 .box{
   width: 255px;
