@@ -73,6 +73,7 @@ a {
 .section-name {
   margin-top: 0;
   margin-bottom: 0;
+  max-width: 1110px;
   font-size: 48px;
   font-weight: 900;
   color: #515151;
@@ -176,6 +177,7 @@ a {
 }
 button {
   margin-top: 8px;
+  margin-bottom: 8px;
   padding: 13px 38px 13px 40px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
