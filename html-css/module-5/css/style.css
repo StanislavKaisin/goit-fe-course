@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
 }
 .wrapper{
-  width: 1600px;
+  width: 1110px;
   margin: 0 auto;
 }
 /* header */
@@ -101,6 +101,7 @@ body {
 }
 .background{
   top: 84px;
+  margin-left: -245px;
   width: 1600px;
   height: 600px;
   background-color: #000002;
@@ -154,7 +155,8 @@ body {
   text-decoration: none;
 }
 .products {
-  width: 100%;
+  margin-left: -245px;
+  width: 1600px;
   background-color: #e9f0fd;
 }
 .products-box{
@@ -321,7 +323,8 @@ body {
 }
 /* footer   */
 .main-footer{
-  width: 100%;
+  margin-left: -245px;
+  width: 1600px;
   background-color: #323232;
 }
 .main-footer-copyight-box{
