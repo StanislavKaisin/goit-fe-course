@@ -1,0 +1,352 @@
+html {
+  min-width: 1110px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url(../img/slide4.jpg);
+  background-position: 50% 84px;
+  background-size: 1600px 600px;
+  background-repeat: no-repeat;
+}
+.wrapper{
+  width: 1600px;
+  margin: 0 auto;
+}
+/* header */
+.main-header{
+  width: 100%;
+}
+.main-header-box{
+  position: relative;
+  margin: 0 auto;
+  width: 1110px;
+  height: 84px;
+}
+.logo-link{
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.main-logo{
+  font-size: 30px;
+  line-height: 32px;
+  color: #555252;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.logo-link::first-letter{
+  color: #1abc9c;
+  font-weight: 700;
+}
+.main-nav{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav-item{
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  display: inline-block;
+}
+.main-nav-item:nth-child(1){
+  left: 645px;
+}
+.main-nav-item:nth-child(2){
+  left: 720px;
+}
+.main-nav-item:nth-child(3){
+  left: 825px;
+}
+.main-nav-item:nth-child(4){
+  left: 890px;
+}
+.main-nav-item:nth-child(5){
+  left: 955px;
+}
+.main-nav-item:nth-child(6){
+  left: 1025px;
+}
+.main-nav-link{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 11px;
+  color: #0f0101;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-nav-link:hover{
+  color: #1abc9c;
+}
+.visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.tours-box{
+  position: relative;
+  margin: 0 auto;
+}
+.background{
+  top: 84px;
+  width: 1600px;
+  height: 600px;
+  background-color: #000002;
+  opacity: 0.522;
+}
+.tours-box-content{
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+  width: 1110px;
+  height: 600px;
+}
+.left-arrow, .right-arrow{
+  position: absolute;
+  z-index: 1;
+  top: 225px;
+  opacity: 0.65;
+  cursor: pointer;
+}
+.right-arrow{
+  right: 0%;
+}
+.right-arrow:hover, .left-arrow:hover{
+  opacity: 1;
+}
+.tour-name{
+  position: absolute;
+  z-index: 2;
+  top: 137px;
+  left: 190px;
+  font-family: "Roboto", sans-serif;
+  font-size: 60px;
+  line-height: 82px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.tour-offers{
+  position: absolute;
+  z-index: 2;
+  top: 280px;
+  left: 185px;
+}
+.tour-offer{
+  font-size: 24px;
+  line-height: 54px;
+  color: #ffffff;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.products {
+  width: 100%;
+  background-color: #e9f0fd;
+}
+.products-box{
+  position: relative;
+  margin: 0 auto;
+  width: 1110px;
+  height: 675px;
+  background-color: #e9f0fd;
+}
+.section-title{
+  position: absolute;
+  top: 100px;
+  left: 365px;
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+  line-height: 32px;
+  color: #515151;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.section-title::after{
+  position: absolute;
+  top: 68px;
+  left: 115px;
+  width: 165px;
+  height: 7px;
+  background: #1abc9c;
+  content: "";
+  clear: both;
+  display: table;
+}
+.products-list {
+  position: absolute;
+  top: 253px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.product {
+  position: absolute;
+  width: 255px;
+  height: 322px;
+}
+.product:nth-child(2) {
+  left: 285px;
+}
+.product:nth-child(3) {
+  left: 570px;
+}
+.product:nth-child(4) {
+  left: 855px;
+}
+.product>a {
+  text-decoration: none;
+}
+.product-price-box{
+  width: 255px;
+}
+.product-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 200px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 900;
+  text-indent: 12px; 
+  background: #323232;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.product-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 55px;
+  font-size: 18px;
+  line-height: 32px;
+  text-indent: 12px; 
+  background: #8c8c8c;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.product:hover .product-name {
+  background: #1abc9c;
+}
+.product:hover .product-price {
+  background: #7fd9c7;
+}
+.cart-block{
+  opacity: 0;
+}
+.product:hover .cart-block {
+  opacity: 1;
+}
+
+.cart-block-background {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 235px;
+  height: 261px;
+  background-color: #000000;
+  opacity: 0.549;
+}
+.cart-list{
+  position: absolute;
+  top: 0;
+  list-style: none;
+}
+.cart-block-item{
+  position: absolute;
+}
+.cart-block-item:nth-child(1){
+  top: 89px;
+  left: 45px;
+  width: 50px;
+  height: 50px;
+}
+.cart-block-item:nth-child(2){
+  top: 89px;
+  left: 104px;
+  width: 50px;
+  height: 50px;
+}
+.cart-block-item:nth-child(3){
+  top: 89px;
+  left: 161px;
+  width: 50px;
+  height: 50px;
+}
+.cart-block-item:nth-child(4){
+  top: 147px;
+  left: 45px;
+  width: 166px;
+  height: 50px;
+  background-image: url(../img/cart-button.png);
+  background-color: #323232;
+}
+.cart-block-item:hover{
+  background-color: #1abc9c;
+}
+.cart-button{
+  position: absolute;
+  top: 9px;
+  left: 59px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* footer   */
+.main-footer{
+  width: 100%;
+  background-color: #323232;
+}
+.main-footer-copyight-box{
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 88px;
+}
+.main-footer-text{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-footer-copyight{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #fefefe;
+  line-height: 28px;
+  font-weight: 300;
+}
+.author{
+  display: inline-block;
+  color: #46bfa9;
+}
