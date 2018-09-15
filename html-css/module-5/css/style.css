@@ -7,19 +7,18 @@ body {
   background-position: 50% 84px;
   background-size: 1600px 600px;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 .wrapper{
-  width: 1110px;
+  width: 1600px;
   margin: 0 auto;
 }
 /* header */
-.main-header{
-  width: 100%;
-}
 .main-header-box{
   position: relative;
   margin: 0 auto;
   width: 1110px;
+  max-width: 100%;
   height: 84px;
 }
 .logo-link{
@@ -96,28 +95,27 @@ body {
   overflow: hidden;
 }
 .tours-box{
-  position: relative;
-  margin: 0 auto;
+  position: absolute;
+  top: 85px;
+  left: 50%; 
+  transform: translate(-50%, 0%);
+  width: 1110px;
+  height: 600px;
+  max-width: 100%;
 }
 .background{
   top: 84px;
-  margin-left: -245px;
-  width: 1600px;
+  max-width: 100%;
   height: 600px;
   background-color: #000002;
   opacity: 0.522;
 }
 .tours-box-content{
   position: absolute;
-  left: 50%;
-  top: 0%;
-  transform: translate(-50%, 0%);
   width: 1110px;
-  height: 600px;
 }
 .left-arrow, .right-arrow{
   position: absolute;
-  z-index: 1;
   top: 225px;
   opacity: 0.65;
   cursor: pointer;
@@ -155,13 +153,12 @@ body {
   text-decoration: none;
 }
 .products {
-  margin-left: -245px;
-  width: 1600px;
   background-color: #e9f0fd;
 }
 .products-box{
   position: relative;
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 1110px;
   height: 675px;
   background-color: #e9f0fd;
@@ -323,13 +320,12 @@ body {
 }
 /* footer   */
 .main-footer{
-  margin-left: -245px;
-  width: 1600px;
   background-color: #323232;
 }
 .main-footer-copyight-box{
   position: relative;
-  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 100%;
   height: 88px;
 }
