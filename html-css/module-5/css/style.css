@@ -328,9 +328,16 @@ body {
   color: #fefefe;
   line-height: 28px;
   letter-spacing: -0.32px;
+  text-decoration: none;
 }
-.author{
+.designer-link{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.designer{
+  margin: 0;
+  padding: 0;
   display: inline-block;
   color: #46bfa9;
-  text-decoration: none;
 }
