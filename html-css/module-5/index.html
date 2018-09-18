@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900&amp;subset=latin-ext" rel="stylesheet">
 
 </head>
 <body>
   <header class="main-header">
-    <div class="main-header-box">
+    <div class="main-header-box container clearfix">
       <a class="logo-link" href="#"><h1 class="main-logo">mart</h1></a>
-      <ul class="main-nav">
+      <ul class="main-nav clearfix">
         <li class="main-nav-item">
           <a class="main-nav-link" href="#">home</a>
         </li>
@@ -43,11 +43,17 @@
       <div class="background"></div>
       <div class="tours-box">
         <div class="tours-box-content">
-          <div class="left-arrow">
-            <img src="img/left-arrow.jpg" alt="left-arrow" width="104" height="104">
+          <div class="previous-tour">
+            <a class="tour-link" href="#">
+              <p class="visually-hidden">previous tour</p>
+              <img src="img/left-arrow.jpg" alt="left-arrow" width="104" height="104">
+            </a>
           </div>
-          <div class="right-arrow">
-            <img src="img/right-arrow.jpg" alt="right-arrow" width="104" height="104">
+          <div class="next-tour">
+            <a class="tour-link" href="#">
+              <p class="visually-hidden">next tour</p>
+              <img src="img/right-arrow.jpg" alt="right-arrow" width="104" height="104">
+            </a>
           </div>
           <p class="tour-name">affordable paris tours</p>
           <div class="tour-offers">
@@ -61,11 +67,11 @@
       </div>
     </section>
     <section class="products">
-      <div class="products-box">
+      <div class="container">
         <h2 class="section-title">new collection</h2>
-        <ul class="products-list">
+        <ul class="products-list clearfix">
           <li class="product">
-            <a href="#">
+            <a class="product-link" href="#">
               <img src="img/blue-tshirt.jpg" alt="blue-tshirt" width="255" height="322">
               <div class="product-price-box">
                 <h3 class="product-name">blue tshirt</h3>
@@ -73,37 +79,37 @@
               </div>
             </a>
             <div class="cart-block">
-              <div class="cart-block-background"></div>
-              <ul class="cart-list">
-                <li class="cart-block-item">
-                  <a class="wish" href="#">
-                    <p class="visually-hidden">wish</p>
-                    <img src="img/heart.png" alt="add to wish-list" width="50" height="50">
-                  </a>
-                </li>
-                <li class="cart-block-item">
-                  <a class="compare" href="#">
-                    <p class="visually-hidden">compare</p>
-                    <img src="img/arrows.png" alt="compare" width="50" height="50">
-                  </a>
-                </li>
-                <li class="cart-block-item">
-                  <a class="hold-over" href="#">
-                    <p class="visually-hidden">hold over</p>
-                    <img src="img/clock.png" alt="hold over" width="50" height="50">
-                  </a>
-                </li>
-                <li class="cart-block-item">
-                  <a class="cart" href="#">
-                    <p class="visually-hidden">cart</p>
-                    <p class="cart-button">add to cart</p>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                <div class="cart-block-background"></div>
+                <ul class="cart-list">
+                  <li class="cart-block-item">
+                    <a class="wish" href="#">
+                      <p class="visually-hidden">wish</p>
+                      <img src="img/heart.png" alt="add to wish-list" width="50" height="50">
+                    </a>
+                  </li>
+                  <li class="cart-block-item">
+                    <a class="compare" href="#">
+                      <p class="visually-hidden">compare</p>
+                      <img src="img/arrows.png" alt="compare" width="50" height="50">
+                    </a>
+                  </li>
+                  <li class="cart-block-item">
+                    <a class="hold-over" href="#">
+                      <p class="visually-hidden">hold over</p>
+                      <img src="img/clock.png" alt="hold over" width="50" height="50">
+                    </a>
+                  </li>
+                  <li class="cart-block-item">
+                    <a class="cart" href="#">
+                      <p class="visually-hidden">cart</p>
+                      <p class="cart-button">add to cart</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </li>
           <li class="product">
-            <a href="#">
+            <a class="product-link" href="#">
               <img src="img/woman-shirt.jpg" alt="woman-shirt" width="255" height="322">
               <div class="product-price-box">
                 <h3 class="product-name">WOMAN shirt</h3>
@@ -141,7 +147,7 @@
             </div>
           </li>
           <li class="product">
-            <a href="#">
+            <a class="product-link" href="#">
               <img src="img/yellow-tshirt.jpg" alt="yellow-tshirt" width="255" height="322">
               <div class="product-price-box">
                 <h3 class="product-name">YELLOW Tshirt</h3>
@@ -179,7 +185,7 @@
             </div>
           </li>
           <li class="product">
-            <a href="#">
+            <a class="product-link" href="#">
               <img src="img/cool-lingerie.jpg" alt="cool-lingerie" width="255" height="322">
               <div class="product-price-box">
                 <h3 class="product-name">Cool lingerie</h3>
@@ -221,14 +227,10 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer-copyight-box">
+    <div class="container">
       <div class="main-footer-text">
-        <p class="main-footer-copyight">All Rights Reserved</p>
-        <span class="main-footer-copyight">©</span>
-        <p class="main-footer-copyight">Dokan</p>
-        <span class="main-footer-copyight"> | </span>
-        <p class="main-footer-copyight">Designed</p>
-        <p class="main-footer-copyight author">ThemenGraph</p>
+        <p class="main-footer-copyight">All Rights Reserved © Dokan | Designed</p>
+        <a  class="main-footer-copyight author" href="#">ThemenGraph</a>
       </div>
     </div>
   </footer>
