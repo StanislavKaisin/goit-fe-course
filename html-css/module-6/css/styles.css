@@ -94,15 +94,15 @@ body{
 }
 .logo-link{
   display: block;
+  text-decoration: none;
 }
-.logo-link{
+.main-header{
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 800;
-  text-decoration: none;
   color: #95e1d3;
 }
 .main-nav{
@@ -201,7 +201,6 @@ body{
 }
 .service-item{
   display: flex;
-  flex-direction: row;
   margin-bottom: 96px;
 }
 .service-item:nth-last-child(-n+3){
@@ -214,9 +213,8 @@ body{
   margin: 0 auto;
   margin-top: 2px;
 }
-.service-item-link{
+.service-description-box{
   width: 300px;
-  text-decoration: none;
 }
 .service-name{
   margin: 0;
@@ -392,11 +390,13 @@ body{
   font-weight: 300;
   font-style: italic;
   text-indent: 12px;
-  color: #cccccc;
   border-style: solid;
   border-width: 1px;
   border-color: #e7e7e7;
   border-right: none;
+}
+.email-input::placeholder{
+  color: #cccccc;
 }
 .email-button{
   margin: 0;
