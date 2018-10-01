@@ -44,7 +44,7 @@ body{
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 38px;
-  padding-bottom: 118px;
+  padding-bottom: 10px;
 }
 .logo-link{
   display: block;
@@ -175,9 +175,11 @@ body{
   background-image: url(../img/Icon-Locked.png);
 }
 .services-section{
+  padding-top: 108px;
   padding-bottom: 114px;
 }
 .contact-form-section {
+  padding-top: 106px;
   padding-bottom: 112px;
   background-color: #222222;
   background-image: url(../img/Map-Image.png);
@@ -186,7 +188,6 @@ body{
   background-position-y: 120px;
 }
 .contact-form-section .section-header{
-  padding-top: 106px;
   margin-bottom: 16px;
   color: #ffffff;
 }
