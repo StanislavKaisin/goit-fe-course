@@ -43,8 +43,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  min-height: 68px;
-  margin-bottom: 118px;
+  padding-top: 38px;
+  padding-bottom: 118px;
 }
 .logo-link{
   display: block;
@@ -91,10 +91,7 @@ body{
 .section-header {
   margin: 0;
   padding: 0;
-}
-.section-name{
-  margin: 0;
-  padding: 0;
+  margin-bottom: 12px;
   display: block;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -119,19 +116,8 @@ body{
   text-align: center;
   text-transform: none;
 }
-.services-section .section-name{
-  margin-bottom: 14px;
-}
-.services-section .section-header{
-  margin-bottom: 76px;
-}
-.service-description{
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto";
-  font-size: 15px;
-  line-height: 1;
-  color: #999999;
+.services-section .section-desription-text{
+  margin-bottom: 78px;
 }
 .services-list{
   display: flex;
@@ -145,6 +131,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
 }
 .service-name{
   margin: 0;
@@ -160,13 +147,12 @@ body{
 .service-description{
   margin: 0;
   padding: 0;
-  width: 280px;
   font-family: "Roboto Slab";
   font-size: 14px;
   line-height: 22px;
   letter-spacing: -0.35px;
   text-align: center;
-  color: #999999;
+  color: #777777;
 }
 .service-item::before{
   margin-bottom: 20px;
@@ -189,32 +175,30 @@ body{
   background-image: url(../img/Icon-Locked.png);
 }
 .services-section{
-  margin-bottom: 118px;
+  padding-bottom: 114px;
 }
 .contact-form-section {
-  margin-bottom: 112px;
+  padding-bottom: 112px;
   background-color: #222222;
   background-image: url(../img/Map-Image.png);
   background-repeat: no-repeat;
   background-position-x: 80%;
   background-position-y: 120px;
 }
-.contact-form-section .section-name{
-  padding-top: 104px;
+.contact-form-section .section-header{
+  padding-top: 106px;
   margin-bottom: 16px;
   color: #ffffff;
 }
-.contact-form-section .section-header{
-  margin-bottom: 70px;
+.contact-form-section .section-desription-text{
+  margin-bottom: 74px;
 }
 .contact-form{
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-bottom: 116px;
 }
 .input-box{
   display: flex;
@@ -227,7 +211,7 @@ body{
   width: 454px;
   height: 50px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   padding: 0;
   border-radius: 3px;
   border: 1px solid #cccccc;
@@ -272,7 +256,7 @@ body{
 }
 .message-input{
   display: block;
-  height: 214px;
+  height: 210px;
   margin: 0;
   padding: 0;
   border-radius: 5px;
@@ -290,68 +274,4 @@ body{
   background-color: #FED136;
   border-radius: 3px;
   border-style: none;
-}
-
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
-}
-{
-  /* Позиционирование */
-  /* Блочная модель */
-  /* Типографика */
-  /* Отображение */
-  /* Прочее */
 }
