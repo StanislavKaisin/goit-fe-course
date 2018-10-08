@@ -1,0 +1,229 @@
+html{
+  font-size: 10px;
+}
+body{
+  font-family: 'Roboto', sans-serif;;
+  color: #777777;
+}
+img{
+  width: 100%;
+  height: auto; 
+  display: block;
+}
+.container{
+  width: 320px;
+  margin: 0 auto;
+}
+.header{
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+.logo-link{
+  text-decoration: none;
+}
+.main-logo{
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+.authorisation-nav{
+  margin: 0;
+  margin-bottom: 11.6rem;
+  padding: 0;
+  list-style: none;
+}
+.authorisation-nav-item{
+  display: inline;
+}
+.sign-up-button, .log-in-button{
+  margin: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  background-color: rgba(26, 25, 21, 0);
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.log-in-button{
+  padding-left: 0;
+  border-style: none;
+}
+.promo-section{
+  box-sizing: border-box;
+  padding: 22.4rem 0 13.6rem;
+  background-image: url(../img/background.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo-section-header{
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-indent: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.08rem;
+}
+.promo-section-text-box{
+  padding: 0 5rem 0;
+  margin-bottom: 1.4rem;
+}
+.promo-section-text{
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.find-partner-button{
+  display: block;
+  margin: 0 auto;
+  padding: 1.4rem 5rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.037rem;
+  color: rgb(255, 255, 255);
+  border-style: none;
+  background-color: rgb(255, 78, 80);
+  border-radius: 2rem;
+  border-color: rgb(255, 78, 80);
+  cursor: pointer;
+}
+.partners-section {
+  box-sizing: border-box;
+  padding: 6.6rem 0rem 3rem;
+}
+.partners-section-header-box {
+  padding: 0 3.1rem 0 2.6rem;
+  margin-bottom: 1.4rem;
+}
+.partners-section-header{
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  letter-spacing: -0.04rem;
+}
+.partners-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.partner-cart{
+  margin: 0 auto;
+  margin-bottom: 2.8rem;
+  width: 22rem;
+  text-align: center;
+}
+.partner-cart:last-child{
+  margin-bottom: 2.6rem; 
+}
+.photo-box {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+.partner-photo{
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 50%;
+}
+.icon-container{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: #ffffff solid 4px;
+  content: "";
+  clear: both;
+  display: table;
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+}
+.tv{
+  background-image: url(../img/tv.png);
+  background-color: rgb(255, 78, 80);
+}
+.science{
+  background-image: url(../img/science.png);
+  background-color: rgb(255, 165, 7);
+}
+.cofee{
+  background-image: url(../img/cofee.png);
+  background-color: rgb(28, 215, 173);
+}
+.telegram{
+  background-image: url(../img/telegram.png);
+  background-color: rgb(78, 115, 219);
+}
+.partner-name{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.04rem;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+.partner-description{
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: rgb(102, 102, 102);
+}
+.see-others-button{
+  display: block;
+  margin: 0 auto;
+  padding: 1.1rem 7.1rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.037rem;
+  color: rgb(255, 78, 80);
+  border-width: 2px;
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  border-color: rgb(255, 78, 80);
+  cursor: pointer; 
+}
