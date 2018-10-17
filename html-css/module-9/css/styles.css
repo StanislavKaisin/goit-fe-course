@@ -222,31 +222,6 @@ img{
   border-color: rgb(255, 78, 80);
   cursor: pointer; 
 }
-/* .box1{
-  margin: 1rem;
-  height: 1rem;
-  background: khaki;
-  text-align: center;
-  margin-bottom: 1rem;
-} */
-/* .box2{
-  margin: 1rem;
-  height: 1rem;
-  background: navajowhite;
-  text-align: center;
-} */
-/* .box3{
-  margin: 1rem;
-  height: 1rem;
-  background: lightblue;
-  text-align: center;
-} */
-/* .box4{
-  margin: 1rem;
-  height: 1rem;
-  background: lightsalmon;
-  text-align: center;
-} */
 @media (min-width: 768px) {
   .container{
       width: 748px;
@@ -329,5 +304,4 @@ img{
   .partners-section {
       padding-bottom: 7.4rem;
   }
-
 }
