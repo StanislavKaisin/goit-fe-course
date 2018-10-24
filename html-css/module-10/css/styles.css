@@ -142,8 +142,20 @@ body{
   transition: opacity 200ms linear;
 }
 .banner-section {
-  padding-top: 250px;
-  padding-bottom: 232px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  min-height: 1000px;
+  padding-top: 10px;
+  /* padding-bottom: 232px; */
   background: -webkit-gradient( linear, left top, right top, from(rgba(252,227,138,0.9)), to(rgba(243,129,129,0.9))), url(../img/eagle@1x-min.jpg);
   background: -webkit-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background: -o-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
@@ -151,8 +163,8 @@ body{
   background-size: cover;
 }
 .banner-section--container{
-  padding-left: 198px;
-  padding-right: 198px;
+  /* padding-left: 198px;
+  padding-right: 198px; */
 }
 .learn-more-button{
   display: block;
@@ -194,7 +206,7 @@ body{
 }
 .section-header__name{
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 98px;
   padding: 0;
   display: block;
@@ -207,6 +219,8 @@ body{
   text-transform: uppercase;
 }
 .banner-section--name{
+  width: 820px;
+  text-align: center;
   font-weight: 800;
   font-size: 150px;
   line-height: 140px;
@@ -227,7 +241,7 @@ body{
   content: "";
 }
 .services-section{
-  padding-top: 46px;
+  padding-top: 36px;
   margin-bottom: 92px;
 }
 .service-list{
