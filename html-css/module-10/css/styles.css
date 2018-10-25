@@ -153,18 +153,14 @@ body{
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  min-height: 1000px;
-  padding-top: 10px;
-  /* padding-bottom: 232px; */
+  min-height: 800px;
+  /* padding-top: 10px; */
+  padding-bottom: 200px;
   background: -webkit-gradient( linear, left top, right top, from(rgba(252,227,138,0.9)), to(rgba(243,129,129,0.9))), url(../img/eagle@1x-min.jpg);
   background: -webkit-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background: -o-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background-size: cover;
-}
-.banner-section--container{
-  /* padding-left: 198px;
-  padding-right: 198px; */
 }
 .learn-more-button{
   display: block;
@@ -178,12 +174,24 @@ body{
   border-style: solid;
   border-width: 3px;
   border-color: rgb(255, 255, 255);
+  -webkit-transition: border-color 200ms linear;
+  -o-transition: border-color 200ms linear;
+  transition: border-color 200ms linear;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+}
+.learn-more-button:hover, .learn-more-button:focus {
+  border-color: rgb(252, 227, 138);
+  -webkit-transition: border-color 200ms linear;
+  -o-transition: border-color 200ms linear;
+  transition: border-color 200ms linear;
 }
 .section-header{
   margin: 0;
   padding: 0;
+}
+.banner-section--container{
+  padding-top: 220px;
 }
 .banner-section--header{
   margin-bottom: 112px;
@@ -241,7 +249,7 @@ body{
   content: "";
 }
 .services-section{
-  padding-top: 36px;
+  padding-top: 46px;
   margin-bottom: 92px;
 }
 .service-list{
@@ -403,7 +411,6 @@ body{
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 223px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -440,6 +447,7 @@ body{
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 1px;
+  margin-left: 1px;
   width: 55px;
   height: 56px;
   background: #fce38a;
