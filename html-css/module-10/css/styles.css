@@ -154,13 +154,16 @@ body{
           justify-content: center;
   height: 100vh;
   min-height: 800px;
-  /* padding-top: 10px; */
-  padding-bottom: 200px;
   background: -webkit-gradient( linear, left top, right top, from(rgba(252,227,138,0.9)), to(rgba(243,129,129,0.9))), url(../img/eagle@1x-min.jpg);
   background: -webkit-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background: -o-linear-gradient( left, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%), url(../img/eagle@1x-min.jpg);
   background-size: cover;
+}
+@media (min-width: 1200px) {
+  .banner-section {
+    min-height: 1000px;
+  }
 }
 .learn-more-button{
   display: block;
@@ -191,7 +194,7 @@ body{
   padding: 0;
 }
 .banner-section--container{
-  padding-top: 220px;
+  padding-top: 20px;
 }
 .banner-section--header{
   margin-bottom: 112px;
