@@ -1,0 +1,4 @@
+@mixin transition($property, $time: 200ms, $type: linear) {
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}

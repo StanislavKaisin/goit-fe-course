@@ -1,0 +1,22 @@
+.team-section {
+  margin-bottom: 80px;
+
+  &--name {
+    margin-bottom: 78px;
+  }
+
+  &--intro{
+    margin-bottom: 12px;
+  }
+}
+
+.team-section__description{
+  margin: 0 auto;
+  margin-bottom: 90px;
+  padding: 0;
+  width: 960px;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+

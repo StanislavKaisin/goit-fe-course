@@ -1,0 +1,34 @@
+/*
+   Import partials below
+*/
+@import './normalize';
+@import "./helpers/variables.scss";
+@import "./helpers/placeholders.scss";
+@import "./helpers/mixines.scss";
+
+// base
+@import "./base.scss";
+// common blocks
+@import "./common-blocks/common-blocks.scss";
+// blocks
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/banner-section.scss";
+@import "./blocks/learn-more-button.scss";
+@import "./blocks/section-header.scss";
+@import "./blocks/banner-section.scss";
+@import "./blocks/services-section.scss";
+@import "./blocks/service-list.scss";
+@import "./blocks/service-item.scss";
+@import "./blocks/team-section.scss";
+@import "./blocks/team-list.scss";
+@import "./blocks/team-member.scss";
+@import "./blocks/social-icons.scss";
+@import "./blocks/social-icon.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/email-input.scss";
+@import "./blocks/email-button.scss";
+@import "./blocks/footer.scss";

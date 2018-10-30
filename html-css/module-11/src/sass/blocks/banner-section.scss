@@ -1,0 +1,41 @@
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  min-height: 800px;
+  background: $gradient, url(../images/eagle@1x-min.jpg);
+  background-size: cover;
+
+  @media (min-width: 1200px) {
+    min-height: 1000px;
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: $gradient, url('../images/eagle@2x-min.jpg');
+  }
+  
+  &--container{
+    padding-top: 20px;
+  }
+
+  &--header{
+    margin-bottom: 112px;
+  }
+
+  &--intro{
+    font-size: 72px;
+    color: $headers-light-color;
+    margin-bottom: 60px;
+  }
+
+  &--name{
+    width: 820px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 150px;
+    line-height: 140px;
+    color: $headers-light-color;
+    letter-spacing: -.04em;
+  }
+}

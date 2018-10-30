@@ -1,0 +1,29 @@
+.team-member__name{
+  @extend %margin-0-padding-0;
+  margin-bottom: 6px;
+  font-family: $header-font;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px; 
+  font-weight: 400;
+  color: $headers-dark-color;
+  text-transform: uppercase;
+}
+
+.team-member__pos{
+  @extend %margin-0-padding-0;
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 24px; 
+  color: $text-color;
+}
+
+.team-member__img{
+  width: 380px;
+  height: 470px;
+  margin-bottom: 24px;
+  background: $gradient;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
