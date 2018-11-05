@@ -377,8 +377,9 @@ template {
 
 .link,
 .list,
-.main-header,
 .section-header,
+.main-header,
+.main,
 .service-item__name,
 .service-item__description,
 .team-member__name,
@@ -387,13 +388,6 @@ template {
 .copyright {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  color: #999999;
-  overflow-x: hidden;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -432,6 +426,46 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+.section-header__intro {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 14px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  line-height: 29px;
+  color: #333333;
+  text-align: center;
+}
+
+.section-header__name {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 98px;
+  padding: 0;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-header__name--outline::after {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  width: 62px;
+  height: 4px;
+  background: #f38181;
+  content: "";
+}
+
 .header {
   position: absolute;
   left: 50%;
@@ -452,10 +486,6 @@ input[type="radio"].visually-hidden {
   font-size: 30px;
   color: white;
   font-weight: 700;
-}
-
-.logo {
-  display: block;
 }
 
 .main-nav {
@@ -581,80 +611,6 @@ input[type="radio"].visually-hidden {
   transition-timing-function: linear;
 }
 
-.section-header__intro {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  margin-bottom: 14px;
-  font-family: "Kaushan Script", cursive;
-  font-size: 24px;
-  line-height: 29px;
-  color: #333333;
-  text-align: center;
-}
-
-.section-header__name {
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: 98px;
-  padding: 0;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  color: #333333;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.section-header__name--outline::after {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: block;
-  width: 62px;
-  height: 4px;
-  background: #f38181;
-  content: "";
-}
-
-.banner-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  min-height: 800px;
-  background: linear-gradient(to top, rgba(238, 215, 138, 0.9), rgba(232, 130, 130, 0.9)), url(../images/eagle@1x-min.jpg);
-  background-size: cover;
-}
-
-.banner-section--container {
-  padding-top: 20px;
-}
-
-.banner-section--header {
-  margin-bottom: 112px;
-}
-
-.banner-section--intro {
-  font-size: 72px;
-  color: white;
-  margin-bottom: 60px;
-}
-
-.banner-section--name {
-  width: 820px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 150px;
-  line-height: 140px;
-  color: white;
-  letter-spacing: -.04em;
-}
-
 .services-section {
   padding-top: 46px;
   margin-bottom: 92px;
@@ -725,6 +681,8 @@ input[type="radio"].visually-hidden {
 }
 
 .team-section__description {
+  font-family: "Roboto", sans-serif;
+  color: #999999;
   margin: 0 auto;
   margin-bottom: 90px;
   padding: 0;
@@ -851,6 +809,25 @@ input[type="radio"].visually-hidden {
   transition-timing-function: linear;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+.footer::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e5e5e5;
+  content: "";
+}
+
 .copyright {
   font-family: "Montserrat", sans-serif;
   color: #333333;
@@ -860,6 +837,20 @@ input[type="radio"].visually-hidden {
 
 .copyright__designer {
   color: #f38181;
+}
+
+.email-button {
+  margin: 0;
+  padding: 12px 32px;
+  float: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  background-color: #95e1d3;
+  border: none;
 }
 
 .email-input {
@@ -891,54 +882,13 @@ input[type="radio"].visually-hidden {
   color: #cccccc;
 }
 
-.email-button {
-  margin: 0;
-  padding: 12px 32px;
-  float: left;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 700;
-  color: white;
-  text-transform: uppercase;
-  background-color: #95e1d3;
-  border: none;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 10px 0;
-}
-
-.footer::before {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: #e5e5e5;
-  content: "";
-}
-
 @media (min-width: 1200px) {
-  .banner-section {
-    min-height: 1000px;
-  }
-
   .banner-section {
     min-height: 1000px;
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .banner-section {
-    background-image: linear-gradient(to top, rgba(238, 215, 138, 0.9), rgba(232, 130, 130, 0.9)), url("../images/eagle@2x-min.jpg");
-  }
-
   .banner-section {
     background-image: linear-gradient(to top, rgba(238, 215, 138, 0.9), rgba(232, 130, 130, 0.9)), url("../images/eagle@2x-min.jpg");
   }

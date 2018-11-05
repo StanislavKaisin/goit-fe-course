@@ -6,29 +6,48 @@
 @import "./helpers/placeholders.scss";
 @import "./helpers/mixines.scss";
 
-// base
-@import "./base.scss";
 // common blocks
-@import "./common-blocks/common-blocks.scss";
-// blocks
-@import "./blocks/header.scss";
-@import "./blocks/logo.scss";
-@import "./blocks/main-header.scss";
-@import "./blocks/logo.scss";
-@import "./blocks/main-nav.scss";
-@import "./blocks/banner-section.scss";
-@import "./blocks/learn-more-button.scss";
-@import "./blocks/section-header.scss";
-@import "./blocks/banner-section.scss";
-@import "./blocks/services-section.scss";
-@import "./blocks/service-list.scss";
-@import "./blocks/service-item.scss";
-@import "./blocks/team-section.scss";
-@import "./blocks/team-list.scss";
-@import "./blocks/team-member.scss";
-@import "./blocks/social-icons.scss";
-@import "./blocks/social-icon.scss";
-@import "./blocks/copyright.scss";
-@import "./blocks/email-input.scss";
-@import "./blocks/email-button.scss";
-@import "./blocks/footer.scss";
+@import "./common-blocks/visually-hidden.scss";
+@import "./common-blocks/clearfix.scss";
+@import "./common-blocks/container.scss";
+@import "./common-blocks/link.scss";
+@import "./common-blocks/list.scss";
+@import "./common-blocks/section-header.scss";
+
+// components
+
+// header
+@import "./components/main-header/header.scss";
+@import "./components/main-header/logo.scss";
+@import "./components/main-header/main-header.scss";
+@import "./components/main-header/main-nav.scss";
+
+// main
+
+@import "./components/main/main.scss";
+
+// banner-section
+
+@import "./components/main/banner-section/banner-section.scss";
+@import "./components/main/banner-section/learn-more-button.scss";
+
+// services-section
+
+@import "./components/main/services-section/services-section.scss";
+@import "./components/main/services-section/service-list.scss";
+@import "./components/main/services-section/service-item.scss";
+
+// team-section
+
+@import "./components/main/team-section/team-section.scss";
+@import "./components/main/team-section/team-list.scss";
+@import "./components/main/team-section/team-member.scss";
+@import "./components/main/team-section/social-icons.scss";
+@import "./components/main/team-section/social-icon.scss";
+
+// footer
+
+@import "./components/footer/footer.scss";
+@import "./components/footer/copyright.scss";
+@import "./components/footer/email-button.scss";
+@import "./components/footer/email-input.scss";
