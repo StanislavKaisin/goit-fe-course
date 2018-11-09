@@ -1,0 +1,11 @@
+.copyright{
+  @extend %margin-0-padding-0;
+  font-family: $header-font;
+  color: $headers-dark-color;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.copyright__designer{
+  color: $icons-outline-color;
+}
