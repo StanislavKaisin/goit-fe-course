@@ -73,23 +73,23 @@ const isLoginLength = login => {
   }
 };
 
-const isLoginValid = function(login) {
+const isLoginValid = function (login) {
   if (!isLoginNull(login) && !isLoginNaN(login)) {
     if (isLoginLength(login)) {
       return true;
     } else {
       console.log(
         "Ошибка! Логин должен быть от 4 до 16 символов. Количество символов которые Вы ввели: " +
-          login.length
+        login.length
       );
       return false;
     }
   } else {
-     return false;
+    return false;
   }
 };
 
-const isLoginUnique = function(allLogins, login) {
+const isLoginUnique = function (allLogins, login) {
   if (isLoginValid(login) && !logins.includes(login)) {
     return true;
   } else {
@@ -117,11 +117,11 @@ const addLogin = function (login) {
 // console.log('logins= ' + logins);
 
 // Вызовы функции для проверки
-// addLogin('Ajax'); // 'Логин успешно добавлен!'
-// console.log('logins= ' + logins);
-// addLogin("robotGoogles"); // 'Такой логин уже используется!'
-// console.log('logins= ' + logins);
-// addLogin("Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-// console.log('logins= ' + logins);
-// addLogin('jqueryisextremelyfast'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-// console.log('logins= ' + logins)
+addLogin('Ajax'); // 'Логин успешно добавлен!'
+console.log('logins= ' + logins);
+addLogin("robotGoogles"); // 'Такой логин уже используется!'
+console.log('logins= ' + logins);
+addLogin("Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log('logins= ' + logins);
+addLogin('jqueryisextremelyfast'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log('logins= ' + logins);
