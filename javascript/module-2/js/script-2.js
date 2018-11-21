@@ -24,13 +24,13 @@
   
   Если пользователь нажмет Cancel, прекратить выполнение цикла.
 */
-
+"use strict";
 const passwords = ['1', 'qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 let attempts = 3;
 let userInput;
 let userAttempt = 1;
 let calcAttempt = attempts;
-message = 'У вас закончились попытки, аккаунт заблокирован!';
+let message = 'У вас закончились попытки, аккаунт заблокирован!';
 
 do {
   userInput = prompt('Введите пароль');

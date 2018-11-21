@@ -23,6 +23,7 @@
   
   Если мест нигде нет, показать alert с сообщением 'Извините, столько мест нет ни в одной группе!'
 */
+"use strict";
 const TABA = 6;
 const nameTaba = 'TABA';
 const SHARM = 15;

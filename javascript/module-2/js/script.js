@@ -18,11 +18,10 @@
       'Было введено не число, попробуйте еще раз', при этом результат prompt записывать 
       в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
 */
-
+"use strict";
 let userInput;
 const numbers = [];
 let total = 0;
-
 do {
   userInput = prompt('Введите число');
   //alert(userInput);

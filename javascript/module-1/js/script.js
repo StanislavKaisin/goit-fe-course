@@ -19,9 +19,10 @@
         
   🔔 PS: для удобства и чистоты кода сохраните в переменные сообщения отображаемые в alert
 */
-
+"use strict";
 const adminLogin = "admin";
 const adminPassword = "m4ngo1zh4ackz0r";
+let password;
 
 const login = prompt("Введите логин");
 if (login === null) {
