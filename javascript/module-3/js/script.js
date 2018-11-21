@@ -85,7 +85,7 @@ const isLoginValid = function(login) {
       return false;
     }
   } else {
-    return false;
+     return false;
   }
 };
 
@@ -117,11 +117,11 @@ const addLogin = function (login) {
 // console.log('logins= ' + logins);
 
 // Вызовы функции для проверки
-addLogin('Ajax'); // 'Логин успешно добавлен!'
-console.log('logins= ' + logins);
-addLogin("robotGoogles"); // 'Такой логин уже используется!'
-console.log('logins= ' + logins);
-addLogin("Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log('logins= ' + logins);
-addLogin('jqueryisextremelyfast'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log('logins= ' + logins)
+// addLogin('Ajax'); // 'Логин успешно добавлен!'
+// console.log('logins= ' + logins);
+// addLogin("robotGoogles"); // 'Такой логин уже используется!'
+// console.log('logins= ' + logins);
+// addLogin("Zod"); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// console.log('logins= ' + logins);
+// addLogin('jqueryisextremelyfast'); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// console.log('logins= ' + logins)
