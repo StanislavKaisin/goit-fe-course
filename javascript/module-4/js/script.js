@@ -5,13 +5,14 @@
   денег или нет, уведомляет покупателя о результате.
 */
 
-/* Есть база данных товаров, в формате "имя-товара":"цена за одну единицу" */ 
+/* Есть база данных товаров, в формате "имя-товара":"цена за одну единицу" */
+
 const products = {
   bread: 10,
   milk: 15,
   apples: 20,
   chicken: 50,
-  cheese: 40,
+  cheese: 40
 };
 
 /* 
@@ -51,49 +52,52 @@ function Cashier(name, productDatabase) {
   this.totalPrice = 0;
   this.change = 0;
 
-  this.countTotalPrice = function (order) {
+  this.countTotalPrice = function(order) {
     let totalPrice = 0;
     let keys = Object.keys(order);
     for (key of keys) {
-      let hasProduct = (products.hasOwnProperty(key)) ? true : false;
+      let hasProduct = products.hasOwnProperty(key) ? true : false;
       if (hasProduct) {
         totalPrice += order[key] * products[key];
-      };
+      }
     }
-    return this.totalPrice = totalPrice;
+    return (this.totalPrice = totalPrice);
+  };
 
-  }
+  this.getCustomerMoney = function(value) {
+    if (value > 0) {
+      this.customerMoney = value;
+    } else {
+      return (this.change = null);
+    }
+  };
 
-  this.getCustomerMoney = function (value) {
-    if (value > 0) { this.customerMoney = value } else { return this.change = null };
-  }
-
-  this.countChange = function () {
+  this.countChange = function() {
     if (this.customerMoney < this.totalPrice) {
       this.onError();
-      return this.change = null
-    }
-    else {
+      return (this.change = null);
+    } else {
       this.change = (this.customerMoney - this.totalPrice).toFixed(2);
       this.onSuccess();
-      return this.change
-    };
-  }
+      return this.change;
+    }
+  };
 
-  this.onSuccess = function () {
-    if (this.change !== null) { console.log(`Спасибо за покупку, ваша сдача ${this.change}!`); }
-  }
+  this.onSuccess = function() {
+    if (this.change !== null) {
+      console.log(`Спасибо за покупку, ваша сдача ${this.change}!`);
+    }
+  };
 
-  this.onError = function () {
+  this.onError = function() {
     console.log(`Очень жаль, вам не хватает денег на покупки!`);
-  }
+  };
 
-  this.reset = function () {
+  this.reset = function() {
     this.customerMoney = 0;
     this.totalPrice = 0;
     this.change = 0;
-  }
-
+  };
 }
 
 /* Заказ пользователя хранится в виде объекта следующего формата. "имя-продукта":"количество-единиц" */
@@ -105,7 +109,7 @@ const order = {
 };
 
 /* Пример использования */
-const mango = new Cashier('Mango', products);
+const mango = new Cashier("Mango", products);
 
 // Проверяем исходные значения полей
 console.log(mango.name); // Mango
@@ -130,7 +134,7 @@ console.log(change); // 190
 //    // При успешном обслуживании вызываем метод onSuccess
 mango.onSuccess(change); // Спасибо за покупку, ваша сдача 190
 // } else {
-//   // При неудачном обслуживании вызываем метод onError   
+//   // При неудачном обслуживании вызываем метод onError
 mango.onError(); // Очень жаль, вам не хватает денег на покупки
 // }
 // Вызываем reset при любом исходе обслуживания
