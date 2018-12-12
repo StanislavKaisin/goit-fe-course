@@ -26,25 +26,34 @@ class Hamburger {
    * @param {String} size - Размер
    * @param {String} stuffing - Начинка
    */
+  hasProperty(property) {
+    this.hasOwnProperty(property) ? true : false;
+  }
   constructor(size, stuffing) {
-    this._size = size;
-    this._stuffing = stuffing;
+    if (this.hasProperty(size)) {
+      this._size = size;
+    } else throw Error("Передано неверное значение основы бургнера!");
+    if (Hamburger.hasOwnProperty(stuffing)) {
+      this._stuffing = stuffing;
+    } else throw Error("Передано неверное значение начинки бургнера!");
     this._toppings = [];
   }
-
   /**1
    * Добавить topping к гамбургеру. Можно добавить несколько topping, при условии, что они разные.
    * @param {String} topping - Тип добавки
    */
   addTopping(topping) {
-    if (!this._toppings.includes(topping)) {
-      this._toppings.push(topping);
-
-//=========ПЕРЕДЕЛАТЬ ЗДЕСЬ
-
-    } else {
-      //throw new Error('Такая добавка уже добавлена!');
-      console.log('Такая добавка уже добавлена!')}
+    try {
+      if (Hamburger.hasOwnProperty(topping)) {
+        if (!this._toppings.includes(topping)) {
+          this._toppings.push(topping);
+        } else {
+          throw new Error("Такой топпинг уже добавлен!");
+        }
+      } else throw Error("Передано неверное значение топпинга бургера!");
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   /**2
@@ -52,13 +61,16 @@ class Hamburger {
    * @param {String} topping - Тип добавки
    */
   removeTopping(topping) {
-    if (this._toppings.includes(topping)) {
-      let position=this._toppings.indexOf(topping);
-      this._toppings.splice(position, 1);
-
-//=========ПЕРЕДЕЛАТЬ ЗДЕСЬ
-
-    } else {console.log('Нельзя убрать добавку, которая не была добавлена!')}
+    try {
+      if (this._toppings.includes(topping)) {
+        let position = this._toppings.indexOf(topping);
+        this._toppings.splice(position, 1);
+      } else {
+        throw new Error("Убрать топпинг, который еще не был добавлен нельзя!");
+      }
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   /**3
@@ -102,13 +114,16 @@ class Hamburger {
     let sumValues;
     let sizesValue = Hamburger.SIZES[this.getSize][value];
     let stuffingValue = Hamburger.STUFFINGS[this.getStuffing][value];
-    let toppingValue = this._toppings.reduce((acc, curr) => (acc = acc + Hamburger.TOPPINGS[curr][value]), 0);
+    let toppingValue = this._toppings.reduce(
+      (acc, curr) => (acc = acc + Hamburger.TOPPINGS[curr][value]),
+      0
+    );
     sumValues = sizesValue + stuffingValue + toppingValue;
     return sumValues;
   }
- 
+
   get calculatePrice() {
-    return this.calculateValue('price');
+    return this.calculateValue("price");
   }
 
   /**7
@@ -118,7 +133,7 @@ class Hamburger {
    * Попробуйте сделать это геттером чтобы можно было обращаться как obj.calories и нам вернет сумму.
    */
   get calculateCalories() {
-    return this.calculateValue('calories'); 
+    return this.calculateValue("calories");
   }
 }
 
@@ -126,76 +141,77 @@ class Hamburger {
   Размеры, виды добавок и начинок объявите как статические поля класса.
   Добавьте отсутсвующие поля по аналогии с примером.
 */
-Hamburger.SIZE_SMALL = 'SIZE_SMALL';
-Hamburger.SIZE_LARGE = 'SIZE_LARGE';
+Hamburger.SIZE_SMALL = "SIZE_SMALL";
+Hamburger.SIZE_LARGE = "SIZE_LARGE";
 
 Hamburger.SIZES = {
   [Hamburger.SIZE_SMALL]: {
     price: 30,
-    calories: 50,
+    calories: 50
   },
   [Hamburger.SIZE_LARGE]: {
     price: 50,
-    calories: 100,
-  },
+    calories: 100
+  }
 };
 
-Hamburger.STUFFING_CHEESE = 'STUFFING_CHEESE';
-Hamburger.STUFFING_SALAD = 'STUFFING_SALAD';
-Hamburger.STUFFING_MEAT = 'STUFFING_MEAT';
+Hamburger.STUFFING_CHEESE = "STUFFING_CHEESE";
+Hamburger.STUFFING_SALAD = "STUFFING_SALAD";
+Hamburger.STUFFING_MEAT = "STUFFING_MEAT";
 
 Hamburger.STUFFINGS = {
   [Hamburger.STUFFING_CHEESE]: {
     price: 15,
-    calories: 20,
+    calories: 20
   },
   [Hamburger.STUFFING_SALAD]: {
     price: 20,
-    calories: 5,
+    calories: 5
   },
   [Hamburger.STUFFING_MEAT]: {
     price: 35,
-    calories: 15,
-  },
+    calories: 15
+  }
 };
 
-Hamburger.TOPPING_SPICE = 'TOPPING_SPICE';
-Hamburger.TOPPING_SAUCE = 'TOPPING_SAUCE';
+Hamburger.TOPPING_SPICE = "TOPPING_SPICE";
+Hamburger.TOPPING_SAUCE = "TOPPING_SAUCE";
 
 Hamburger.TOPPINGS = {
   [Hamburger.TOPPING_SPICE]: {
     price: 10,
-    calories: 0,
+    calories: 0
   },
   [Hamburger.TOPPING_SAUCE]: {
     price: 15,
-    calories: 5,
-  },
+    calories: 5
+  }
 };
 
 /* Вот как может выглядеть использование этого класса */
 
 // Маленький гамбургер с начинкой из сыра
-const hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
-
-//========my try start
-console.log("hamburger: ", hamburger);
-//========my try end
+const hamburger = new Hamburger(
+  Hamburger.SIZE_SMALL,
+  Hamburger.STUFFING_CHEESE
+);
 
 // Добавка из приправы
 hamburger.addTopping(Hamburger.TOPPING_SPICE);
 
 //========my try start
+console.log("hamburger: ", hamburger);
+// console.log("hamburger._toppings: ", hamburger._toppings);
+// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
+//hamburger.addTopping(Hamburger.TOPPING_SAUCE);
+//hamburger.addTopping(Hamburger.TOPPING_SAUCE);
+hamburger.addTopping(Hamburger.TOPPING_SPICE);
 // console.log("hamburger: ", hamburger);
 // console.log("hamburger._toppings: ", hamburger._toppings);
 // console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-// hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-// hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-// hamburger.addTopping(Hamburger.TOPPING_SPICE);
-// console.log("hamburger: ", hamburger);
-// console.log("hamburger._toppings: ", hamburger._toppings);
-// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-// //hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
+hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+hamburger.removeTopping(Hamburger.TOPPING_SPICE);
 // console.log("hamburger._toppings: ", hamburger._toppings);
 // console.log("hamburger._toppings.length: ", hamburger._toppings.length);
 // console.log("hamburger.getSize: ", hamburger.getSize);
@@ -239,5 +255,3 @@ console.log("Hamburger has %d toppings", hamburger.getToppings.length); // 1
       		а не вычисленные из них (цена, число калорий и т.д.). Рассчитывать цену и калории
 		логично в тот момент, когда это потребуется, а не заранее.
 */
-
-
