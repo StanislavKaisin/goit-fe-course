@@ -2,15 +2,15 @@
 /*
   Сеть фастфудов предлагает несколько видов гамбургеров.
   Основа (булочка) гамбургера может быть большой или маленькой (обязательно):
-	- маленькая (+30 денег, +50 калорий)
-	- большая (+50 денег, +100 калорий)
+  - маленькая (+30 денег, +50 калорий)
+  - большая (+50 денег, +100 калорий)
   Гамбургер может быть с одной из нескольких видов начинок (обязательно):
-	- сыром (+15 денег, +20 калорий)
-	- салатом (+20 денег, +5 калорий)
-	- мясом (+35 денег, +15 калорий)
+  - сыром (+15 денег, +20 калорий)
+  - салатом (+20 денег, +5 калорий)
+  - мясом (+35 денег, +15 калорий)
   Дополнительно, гамбургер можно:
-	- посыпать приправой (+10 денег, +0 калорий)
-	- полить соусом (+15 денег, +5 калорий)
+  - посыпать приправой (+10 денег, +0 калорий)
+  - полить соусом (+15 денег, +5 калорий)
   Напишите скрипт, расчитывающий стоимость и калорийность гамбургера. Используте ООП подход,
   создайте класс Hamburger, константы, методы для выбора опций и рассчета нужных величин.
   Написанный класс должен соответствовать следующему jsDoc описанию. То есть класс должен содержать
@@ -27,16 +27,16 @@ class Hamburger {
    * @param {String} stuffing - Начинка
    */
   hasProperty(property) {
-    this.hasOwnProperty(property) ? true : false;
+    return Hamburger.hasOwnProperty(property) ? true : false;
   }
   constructor(size, stuffing) {
-    if (this.hasProperty(size)) {
-      this._size = size;
-    } else throw Error("Передано неверное значение основы бургнера!");
-    if (Hamburger.hasOwnProperty(stuffing)) {
-      this._stuffing = stuffing;
-    } else throw Error("Передано неверное значение начинки бургнера!");
-    this._toppings = [];
+      if (this.hasProperty(size)) {
+          this._size = size;
+      } else throw Error("Передано неверное значение основы бургнера!");
+      if (this.hasProperty(stuffing)) {
+          this._stuffing = stuffing;
+      } else throw Error("Передано неверное значение начинки бургнера!");
+      this._toppings = [];
   }
   /**1
    * Добавить topping к гамбургеру. Можно добавить несколько topping, при условии, что они разные.
@@ -44,9 +44,9 @@ class Hamburger {
    */
   addTopping(topping) {
     try {
-      if (Hamburger.hasOwnProperty(topping)) {
+      if (this.hasProperty(topping)) {
         if (!this._toppings.includes(topping)) {
-          this._toppings.push(topping);
+          return this._toppings.push(topping);
         } else {
           throw new Error("Такой топпинг уже добавлен!");
         }
@@ -64,7 +64,7 @@ class Hamburger {
     try {
       if (this._toppings.includes(topping)) {
         let position = this._toppings.indexOf(topping);
-        this._toppings.splice(position, 1);
+        return this._toppings.splice(position, 1);
       } else {
         throw new Error("Убрать топпинг, который еще не был добавлен нельзя!");
       }
@@ -199,27 +199,6 @@ const hamburger = new Hamburger(
 // Добавка из приправы
 hamburger.addTopping(Hamburger.TOPPING_SPICE);
 
-//========my try start
-console.log("hamburger: ", hamburger);
-// console.log("hamburger._toppings: ", hamburger._toppings);
-// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-//hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-//hamburger.addTopping(Hamburger.TOPPING_SAUCE);
-hamburger.addTopping(Hamburger.TOPPING_SPICE);
-// console.log("hamburger: ", hamburger);
-// console.log("hamburger._toppings: ", hamburger._toppings);
-// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
-hamburger.removeTopping(Hamburger.TOPPING_SPICE);
-hamburger.removeTopping(Hamburger.TOPPING_SPICE);
-// console.log("hamburger._toppings: ", hamburger._toppings);
-// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-// console.log("hamburger.getSize: ", hamburger.getSize);
-// console.log("hamburger.getStuffing: ", hamburger.getStuffing);
-// //console.log("Hamburger.SIZES: ", Hamburger.SIZES);
-// console.log("hamburger.calculatePrice: ", hamburger.calculatePrice);
-//========my try end
-
 // Спросим сколько там калорий
 console.log("Calories: ", hamburger.calculateCalories);
 
@@ -243,15 +222,47 @@ console.log("Hamburger has %d toppings", hamburger.getToppings.length); // 1
 
 /*
   🔔 Обратите внимание на такие моменты:
-    	✔️ класс не взаимодействует с внешним миром. Это не его дело, этим занимается
-    		другой код, а класс живет в изоляции от мира
-    	✔️ обязательные параметры (размер и начинка) мы передаем через конструктор,
-		чтобы нельзя было создать объект, не указав их
-    	✔️ необязательные (добавка) добавляем через методы
-    	✔️ типы начинок обозначены "константами" с понятными именами (на самом деле просто
-	    	свойствами, написанным заглавными буквами, которые мы договорились считать "константами")
-    	✔️ объект создается через конструктор - функцию, которая задает начальные значения полей.
-    	✔️ в свойствах объекта гамбургера логично хранить исходные данные (размер, тип начинки),
-      		а не вычисленные из них (цена, число калорий и т.д.). Рассчитывать цену и калории
-		логично в тот момент, когда это потребуется, а не заранее.
+      ✔️ класс не взаимодействует с внешним миром. Это не его дело, этим занимается
+        другой код, а класс живет в изоляции от мира
+      ✔️ обязательные параметры (размер и начинка) мы передаем через конструктор,
+    чтобы нельзя было создать объект, не указав их
+      ✔️ необязательные (добавка) добавляем через методы
+      ✔️ типы начинок обозначены "константами" с понятными именами (на самом деле просто
+        свойствами, написанным заглавными буквами, которые мы договорились считать "константами")
+      ✔️ объект создается через конструктор - функцию, которая задает начальные значения полей.
+      ✔️ в свойствах объекта гамбургера логично хранить исходные данные (размер, тип начинки),
+          а не вычисленные из них (цена, число калорий и т.д.). Рассчитывать цену и калории
+    логично в тот момент, когда это потребуется, а не заранее.
 */
+
+//========my exceptions tests start
+//console.log("hamburger: ", hamburger);
+// const hamburger1 = new Hamburger(
+//     Hamburger.SIZESMALL,
+//     Hamburger.STUFFING_CHEESE
+//   );
+// const hamburger2 = new Hamburger(
+//     Hamburger.SIZE_SMALL,
+//     Hamburger.SUFFING_CHEESE
+//   );
+//hamburger.addTopping(Hamburger.TOPPING_SPCE);
+// console.log("hamburger: ", hamburger);
+//hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
+// hamburger.addTopping(Hamburger.TOPPING_SPICE);
+// console.log("hamburger: ", hamburger);
+// console.log("1)hamburger._toppings:", hamburger._toppings);
+// hamburger.addTopping(Hamburger.TOPPING_SPICE);
+// hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+// hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+// console.log("2)hamburger._toppings:", hamburger._toppings);
+// console.log("hamburger._toppings: ", hamburger._toppings);
+// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
+// console.log("hamburger.getSize: ", hamburger.getSize);
+// console.log("hamburger.getStuffing: ", hamburger.getStuffing);
+// //console.log("Hamburger.SIZES: ", Hamburger.SIZES);
+// console.log("hamburger.calculatePrice: ", hamburger.calculatePrice);
+// hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
+// console.log("3)hamburger._toppings:", hamburger._toppings);
+// hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
+// console.log("4)hamburger._toppings:", hamburger._toppings);
+//========my exceptions tests end
