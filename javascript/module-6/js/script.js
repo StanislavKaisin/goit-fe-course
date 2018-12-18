@@ -52,7 +52,7 @@ class Hamburger {
         }
       } else throw Error("Передано неверное значение топпинга бургера!");
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
   }
 
@@ -69,10 +69,10 @@ class Hamburger {
         throw new Error("Убрать топпинг, который еще не был добавлен нельзя!");
       }
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
   }
-
+  
   /**3
    * Получить список toppings
    * @returns {Array} - Массив добавленных topping, содержит значения констант Hamburger.TOPPING_*
@@ -236,33 +236,21 @@ console.log("Hamburger has %d toppings", hamburger.getToppings.length); // 1
 */
 
 //========my exceptions tests start
-//console.log("hamburger: ", hamburger);
+
+// неправильная передача названий основы, начинки или топпинга бургера
 // const hamburger1 = new Hamburger(
 //     Hamburger.SIZESMALL,
 //     Hamburger.STUFFING_CHEESE
-//   );
+//   ); //сообщение об ошибке, прекращение работы программы
 // const hamburger2 = new Hamburger(
 //     Hamburger.SIZE_SMALL,
 //     Hamburger.SUFFING_CHEESE
-//   );
-//hamburger.addTopping(Hamburger.TOPPING_SPCE);
-// console.log("hamburger: ", hamburger);
-//hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
-// hamburger.addTopping(Hamburger.TOPPING_SPICE);
-// console.log("hamburger: ", hamburger);
-// console.log("1)hamburger._toppings:", hamburger._toppings);
-// hamburger.addTopping(Hamburger.TOPPING_SPICE);
-// hamburger.removeTopping(Hamburger.TOPPING_SPICE);
-// hamburger.removeTopping(Hamburger.TOPPING_SPICE);
-// console.log("2)hamburger._toppings:", hamburger._toppings);
-// console.log("hamburger._toppings: ", hamburger._toppings);
-// console.log("hamburger._toppings.length: ", hamburger._toppings.length);
-// console.log("hamburger.getSize: ", hamburger.getSize);
-// console.log("hamburger.getStuffing: ", hamburger.getStuffing);
-// //console.log("Hamburger.SIZES: ", Hamburger.SIZES);
-// console.log("hamburger.calculatePrice: ", hamburger.calculatePrice);
-// hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
-// console.log("3)hamburger._toppings:", hamburger._toppings);
-// hamburger.removeTopping(Hamburger.TOPPING_SAUCE);
-// console.log("4)hamburger._toppings:", hamburger._toppings);
+//   ); //сообщение об ошибке, прекращение работы программы
+// hamburger.addTopping(Hamburger.TOPPING_SPCE); //сообщение об ошибке, прекращение работы программы
+
+console.log("hamburger=", hamburger);
+// добавить один и тот же топпинг два раза
+hamburger.addTopping(Hamburger.TOPPING_SAUCE);  //сообщение об ошибке
+// убрать топпинг, который не был добавлен
+hamburger.removeTopping(Hamburger.TOPPING_SPICE);  //сообщение об ошибке
 //========my exceptions tests end
