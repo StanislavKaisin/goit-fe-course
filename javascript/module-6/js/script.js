@@ -26,17 +26,11 @@ class Hamburger {
    * @param {String} size - Размер
    * @param {String} stuffing - Начинка
    */
-  hasProperty(property) {
-    return Hamburger.hasOwnProperty(property) ? true : false;
-  }
+
   constructor(size, stuffing) {
-      if (this.hasProperty(size)) {
-          this._size = size;
-      } else throw Error("Передано неверное значение основы бургнера!");
-      if (this.hasProperty(stuffing)) {
-          this._stuffing = stuffing;
-      } else throw Error("Передано неверное значение начинки бургнера!");
-      this._toppings = [];
+    this._size = size;
+    this._stuffing = stuffing;
+    this._toppings = [];
   }
   /**1
    * Добавить topping к гамбургеру. Можно добавить несколько topping, при условии, что они разные.
@@ -44,13 +38,11 @@ class Hamburger {
    */
   addTopping(topping) {
     try {
-      if (this.hasProperty(topping)) {
-        if (!this._toppings.includes(topping)) {
-          return this._toppings.push(topping);
-        } else {
-          throw new Error("Такой топпинг уже добавлен!");
-        }
-      } else throw Error("Передано неверное значение топпинга бургера!");
+      if (!this._toppings.includes(topping)) {
+        return this._toppings.push(topping);
+      } else {
+        throw new Error("Такой топпинг уже добавлен!");
+      }
     } catch (err) {
       console.log(err.message);
     }
@@ -66,13 +58,13 @@ class Hamburger {
         let position = this._toppings.indexOf(topping);
         return this._toppings.splice(position, 1);
       } else {
-        throw new Error("Убрать топпинг, который еще не был добавлен нельзя!");
+        throw new Error("Убрать топпинг, который еще не был добавлен, нельзя!");
       }
     } catch (err) {
       console.log(err.message);
     }
   }
-  
+
   /**3
    * Получить список toppings
    * @returns {Array} - Массив добавленных topping, содержит значения констант Hamburger.TOPPING_*
@@ -236,18 +228,6 @@ console.log("Hamburger has %d toppings", hamburger.getToppings.length); // 1
 */
 
 //========my exceptions tests start
-
-// неправильная передача названий основы, начинки или топпинга бургера
-// const hamburger1 = new Hamburger(
-//     Hamburger.SIZESMALL,
-//     Hamburger.STUFFING_CHEESE
-//   ); //сообщение об ошибке, прекращение работы программы
-// const hamburger2 = new Hamburger(
-//     Hamburger.SIZE_SMALL,
-//     Hamburger.SUFFING_CHEESE
-//   ); //сообщение об ошибке, прекращение работы программы
-// hamburger.addTopping(Hamburger.TOPPING_SPCE); //сообщение об ошибке, прекращение работы программы
-
 console.log("hamburger=", hamburger);
 // добавить один и тот же топпинг два раза
 hamburger.addTopping(Hamburger.TOPPING_SAUCE);  //сообщение об ошибке
