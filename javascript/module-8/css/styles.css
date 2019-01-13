@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-gallery{
+  margin: 0 auto;
+}
+
+.fullview{
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.fullview>img{
+  margin: 0 auto;
+  width: 75%;
+}
+
+.preview{
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.preview>li{
+  /* display: inline-block; */
+  width: 16.666667%;
+  padding: 5px;
+}
+
+.active-img {
+  box-shadow:2px 2px 5px #6A2D80;
+}
