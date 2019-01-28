@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>homework-10</title>
+</head>
+<body>
+  <div class="container">
+    <form class="search-form">
+      <button class="mdc-btn js-button--all" type="submit">получить Список всех пользователей</button>
+    </form>
+    <table class="users-table">
+      <thead>
+        <tr>
+          <th>Имя</th>
+          <th>Возраст</th>
+          <th>id</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="container">
+    <form class="search-form js-form--id">
+      <input type="text" name="country" placeholder="Введите id пользователя">
+      <button class="mdc-btn" type="submit">Get user info</button>
+    </form>
+    <div class="result"></div>
+  </div>
+  <div class="container">
+    <form class="search-form add-form js-form--add">
+      <input type="text" name="country" placeholder="Введите имя пользователя">
+      <input type="text" name="country" placeholder="Введите возраст пользователя">
+      <button class="mdc-btn js-button--all" type="submit">Добавить пользователя</button>
+    </form>
+    <div class="result"></div>
+  </div>
+  <div class="container">
+    <form class="search-form js-form--del">
+      <input type="text" name="country" placeholder="Введите id пользователя">
+      <button class="mdc-btn" type="submit">Удалить пользователя</button>
+    </form>
+    <div class="result"></div>
+  </div>
+  <div class="container">
+    <form class="search-form add-form js-form--change">
+      <input type="text" name="country" placeholder="Введите id пользователя">
+      <input type="text" name="country" placeholder="Введите новое имя пользователя">
+      <input type="text" name="country" placeholder="Введите новый возраст пользователя">
+      <button class="mdc-btn js-button--all" type="submit">Изменить данные пользователя</button>
+    </form>
+    <div class="result"></div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
