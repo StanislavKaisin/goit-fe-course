@@ -59,7 +59,7 @@ function checkURLList(newURL) {
   return URLindex;
 }
 
-function checkURL(inputURL) {
+function checInputURL(inputURL) {
   let pattern = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
   let result = pattern.test(inputURL);
   return result;
@@ -68,7 +68,7 @@ function checkURL(inputURL) {
 function getInputUrl(event) {
   let input = event.target[0];
   let inputURL = input.value;
-  let check = checkURL(inputURL);
+  let check = checInputURL(inputURL);
   if (check) return inputURL
   else {
     clearInput(event);
@@ -77,14 +77,17 @@ function getInputUrl(event) {
   };
 }
 
-function deleteThisCard(deletedCard){
-  URLCardsList=URLCardsList.filter(URLCard=>deletedCard!==URLCard.url);
+function deleteThisCard(deletedCard) {
+  URLCardsList = URLCardsList.filter(URLCard => deletedCard !== URLCard.url);
 }
 
 //================interface
 function fromLocalGet() {
-  URLCardsList = storage.fromLocalGet();
-  updateCardsList(URLCardsList);
+  let URLCardsFromStorage = storage.fromLocalGet();
+  if (URLCardsFromStorage !== null) {
+    URLCardsList = URLCardsFromStorage;
+    updateCardsList(URLCardsList);
+  }
 }
 
 function handleInputURL(event) {
@@ -105,6 +108,7 @@ function handleInputURL(event) {
     }
   }
 }
+
 function clearInput(event) {
   return event.target[0].value = '';
 }
@@ -145,4 +149,3 @@ function getPreviewInfo(URL) {
     })
     .catch(error => console.log(error));
 }
-
