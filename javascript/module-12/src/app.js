@@ -131,7 +131,7 @@ function handleDelCard(event) {
 }
 //================API
 function getPreviewInfo(URL) {
-  fetch(`http://api.linkpreview.net/?key=${APIKEY}&q=${URL}`)
+  fetch(`https://api.linkpreview.net/?key=${APIKEY}&q=${URL}`)
     .then(response => response.json())
     .then(data => {
       if (data.hasOwnProperty('error')) {
