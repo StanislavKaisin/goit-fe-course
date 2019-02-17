@@ -1,4 +1,5 @@
 "use strict";
+import fetchedURLCard from './services/api';
 import * as storage from './services/storage';
 import URLCardTemplate from './templates/URLCardTemplate.hbs';
 import './styles.css';
@@ -130,6 +131,7 @@ function handleDelCard(event) {
   }
 }
 //================API
+
 function getPreviewInfo(URL) {
   fetch(`https://api.linkpreview.net/?key=${APIKEY}&q=${URL}`)
     .then(response => response.json())
